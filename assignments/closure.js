@@ -9,8 +9,12 @@ function add(a, b) { return a + b};
 const counter = () => {
   // Return a function that when invoked increments and returns a counter variable.
   let count = 0;
-  count = count++;
-  return count; 
+  const newCounter = () => {
+    count = count++;
+    console.log(count);
+     
+  }
+  return newCounter;
 };
 // Example usage: const newCounter = counter();
 // newCounter(); // 1
